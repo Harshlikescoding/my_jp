@@ -4,8 +4,8 @@ export const contactsData = {
     address: 'Toronto , ON , Canada ',
     github: 'https://github.com/harshlikescoding',
     facebook: '',
-    linkedIn: 'https://www.linkedin.com/in/abu-said-bd/',
+    linkedIn: 'https://www.linkedin.com/in/harshchaudhary960/',
     twitter: 'https://twitter.com/said7388',
-    stackOverflow: 'https://stackoverflow.com/users/16840768/abu-said',
-    devUsername: "said7388"
+    stackOverflow: 'https://stackoverflow.com/users/29457933/harsh-chaudhary',
+    devUsername: "Harshlikescoding"
 }
