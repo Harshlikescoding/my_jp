@@ -1,20 +1,16 @@
 "use client"
+import { Player } from '@lottiefiles/react-lottie-player' // or lottie-react
+// or import lottie from 'lottie-web';
 
-import Lottie from "lottie-react";
-
-const AnimationLottie = ({ animationPath, width }) => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationPath,
-    style: {
-      width: '95%',
-    }
-  };
-
+const ActualLottieComponent = () => {
   return (
-    <Lottie {...defaultOptions} />
-  );
-};
+    <Player
+      autoplay
+      loop
+      src="/path/to/animation.json"
+      style={{ height: '300px', width: '300px' }}
+    />
+  )
+}
 
 export default AnimationLottie;
