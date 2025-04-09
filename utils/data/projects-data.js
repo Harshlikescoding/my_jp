@@ -37,6 +37,26 @@ export const projectsData = [
       role: 'Game Developer',
       code: '',
       demo: ''
+    },
+    {
+      id: 4,
+      name: 'Meteory – iOS Weather Application',
+      description:
+        "Designed and developed a modern, animated iOS weather app using SwiftUI. The app includes features like real-time weather info, multi-city support, animated weather effects (rain, clouds, snow), reminders based on weather conditions, and a customizable side drawer. It also includes daily and 7-day forecasts, UV and AQI insights, and smooth fade-in animations to improve user experience.",
+      tools: ['Swift', 'SwiftUI', 'Xcode', 'OpenWeatherMap API'],
+      role: 'iOS Developer',
+      code: '',
+      demo: ''
+    },
+    {
+      id: 5,
+      name: 'Habitude – iOS Habit Tracker',
+      description:
+        "Built a fully functional habit tracking iOS app using SwiftUI. Includes a flexible daily routine planner, animated UI for streaks and completion, a heatmap calendar for habit history, filtering options by category, and a dedicated section for daily reflections and motivational notes. Habits reset at midnight and support reminders, weekly stats, and custom schedules. CoreData is used for offline persistence.",
+      tools: ['SwiftUI', 'Xcode', 'CoreData'],
+      role: 'iOS Developer',
+      code: '',
+      demo: ''
     }
   ];
   

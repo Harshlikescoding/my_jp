@@ -102,16 +102,7 @@ const SingleProject = ({ project }) => {
               <Link href={documents.status} target="_blank" className="underline hover:text-violet-300">Status</Link>
             </li>
           )}
-          {documents.design && (
-            <li>
-              <Link href={documents.design} target="_blank" className="underline hover:text-violet-300">Wireframes</Link>
-            </li>
-          )}
-          {documents.implementation && (
-            <li>
-              <Link href={documents.implementation} target="_blank" className="underline hover:text-violet-300">Implementation</Link>
-            </li>
-          )}
+          
         </ul>
       </div>
     )}
