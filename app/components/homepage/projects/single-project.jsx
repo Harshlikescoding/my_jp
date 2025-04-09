@@ -4,7 +4,7 @@ import { FaCode, FaPlay } from 'react-icons/fa';
 import placeholder from '/public/png/placeholder.png';
 
 const SingleProject = ({ project }) => {
-  const { name, description, tags, code, demo, image, features } = project;
+  const { name, description, tags, code, demo, image, documents } = project;
 
   return (
     <div className='group w-full h-fit flex flex-col items-center justify-center relative cursor-text overflow-hidden px-3 md:px-8 py-[1.4rem] bg-[linear-gradient(90deg,#281e57_0%,#201435_100%)] shadow-2xl rounded-lg border border-[#1a1443]'
@@ -64,9 +64,60 @@ const SingleProject = ({ project }) => {
           </Link>
         </div>
       </div>
-      <p className="absolute w-[90%] md:w-[85%] md:min-h-[150px] translate-x-[-110%] transition-transform duration-[0.9s] p-6 leading-[110%] rounded-[0_20px_20px_0] left-0 top-0 bg-[#0f0b24]  text-[#EFF3F4] translate-y-[25%] md:translate-y-[50%] group-hover:translate-x-[-2%] text-xs md:text-sm">
-        {description}
-      </p>
+      <div className="absolute w-[90%] md:w-[85%] md:min-h-[240px] max-h-[300px] overflow-y-auto translate-x-[-110%] transition-transform duration-[0.9s] p-6 leading-[110%] rounded-[0_20px_20px_0] left-0 top-0 bg-[#0f0b24] text-[#EFF3F4] translate-y-[25%] md:translate-y-[50%] group-hover:translate-x-[-2%] text-xs md:text-sm z-10">
+  <div className="flex flex-col md:flex-row justify-between gap-6 w-full">
+    
+    {/* Description (Left Side) */}
+    <div className="md:w-2/3">
+      <p className="mb-3">{description}</p>
+    </div>
+
+    {/* Documents List (Right Side) */}
+    {documents && (
+      <div className="md:w-1/3">
+        <p className="text-[#16f2b3] font-semibold mb-2 text-xs">Supporting Documents:</p>
+        <ul className="list-disc list-inside space-y-1">
+          {documents.summary && (
+            <li>
+              <Link href={documents.summary} target="_blank" className="underline hover:text-violet-300">Summary</Link>
+            </li>
+          )}
+          {documents.vision && (
+            <li>
+              <Link href={documents.vision} target="_blank" className="underline hover:text-violet-300">Vision</Link>
+            </li>
+          )}
+          {documents.requirements && (
+            <li>
+              <Link href={documents.requirements} target="_blank" className="underline hover:text-violet-300">Requirements</Link>
+            </li>
+          )}
+          {documents.plan && (
+            <li>
+              <Link href={documents.plan} target="_blank" className="underline hover:text-violet-300">Plan</Link>
+            </li>
+          )}
+          {documents.status && (
+            <li>
+              <Link href={documents.status} target="_blank" className="underline hover:text-violet-300">Status</Link>
+            </li>
+          )}
+          {documents.design && (
+            <li>
+              <Link href={documents.design} target="_blank" className="underline hover:text-violet-300">Wireframes</Link>
+            </li>
+          )}
+          {documents.implementation && (
+            <li>
+              <Link href={documents.implementation} target="_blank" className="underline hover:text-violet-300">Implementation</Link>
+            </li>
+          )}
+        </ul>
+      </div>
+    )}
+  </div>
+</div>
+
       <div className='group-hover:translate-x-0 absolute w-[140px] text-[0.8rem] flex justify-center gap-2 flex-col translate-x-full transition-transform duration-[0.5s] delay-[0.3s] p-[0.825rem] rounded-[10px_0_0_10px] right-0 bottom-4 bg-[#0f0b24] text-[#EFF3F4]'>
         {tags.map((tag, id) => (
           <span className='font-medium break-words text-xs' key={id}>

@@ -19,15 +19,21 @@ function AboutSection() {
           <p className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">
             Who I am?
           </p>
-          <p className="text-gray-200 text-sm lg:text-lg">
+          <p className="text-gray-200 text-sm lg:text-lg mb-8">
             {personalData.description}
+          </p>
+          <p className="font-medium  mb-5 text-[#16f2b3] text-xl uppercase">
+            My Career Goal
+          </p>
+          <p className="text-gray-200 text-sm lg:text-lg">
+            As a passionate and ever-evolving developer, I believe that technology is not just a tool but a way to positively influence the world. My work is driven by curiosity, creativity, and a belief that growth comes through continuous learning. I aspire to create impactful, inclusive digital solutions while growing as a developer and empowering others through my craft.
           </p>
         </div>
         <div className="flex justify-center order-1 lg:order-2">
           <Image
             src={personalData.profile}
-            width={280}
-            height={280}
+            width={360}
+            height={130}
             alt="Harsh Chaudhary"
             className="rounded-lg transition-all duration-1000 grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
           />
