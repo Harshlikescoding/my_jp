@@ -62,6 +62,30 @@ function ProjectCard({ project }) {
             <span className="text-gray-400">,</span>
           </div>
           <div><span className="text-gray-400">{`};`}</span></div>
+          {project.documents && (
+  <div className="ml-4 lg:ml-8 mt-2">
+    <span className="text-white">documents:</span>
+    <span className="text-gray-400">{'{'} </span>
+    <div className="ml-4 space-y-1">
+      {Object.entries(project.documents).map(([key, url], idx) => (
+        <div key={key}>
+          <span className="text-white">{key}:</span>{' '}
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-amber-300 underline hover:text-pink-400"
+          >
+            {key}.docx
+          </a>
+          <span className="text-gray-400">{idx < Object.entries(project.documents).length - 1 ? ',' : ''}</span>
+        </div>
+      ))}
+    </div>
+    <span className="text-gray-400"> {'},'}</span>
+  </div>
+)}
+
         </code>
       </div>
     </div>
